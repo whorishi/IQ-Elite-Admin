@@ -1,6 +1,7 @@
 package com.example.quizapp.Adapters;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,6 +55,9 @@ public class GrideAdapter extends BaseAdapter {
             ((TextView)view1.findViewById(R.id.settt)).setText("Add Set   ");
             ((TextView)view1.findViewById(R.id.setName)).setText("+");
             ((TextView)view1.findViewById(R.id.setName)).setTextSize(45);
+            ((TextView)view1.findViewById(R.id.settt)).setTextColor(Color.parseColor("#FFEEFF00"));
+            ((TextView)view1.findViewById(R.id.setName)).setTextColor(Color.parseColor("#FFEEFF00"));
+
         } else {
             ((TextView)view1.findViewById(R.id.setName)).setText(String.valueOf(i));
         }

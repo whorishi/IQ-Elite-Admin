@@ -34,7 +34,6 @@ public class QuestionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityQuestionBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
         getSupportActionBar().hide();
 
         database = FirebaseDatabase.getInstance();

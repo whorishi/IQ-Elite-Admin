@@ -65,10 +65,12 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         getSupportActionBar().hide();
-        //Log.d(TAG, "hi");
+        Log.d(TAG, "hi");
 
         database = FirebaseDatabase.getInstance();
+        Log.v(TAG, "Database connected");
         storage = FirebaseStorage.getInstance();
+        Log.v(TAG, "Storage connected");
 
         list = new ArrayList<>();
 
@@ -90,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
         categoryImage = dialog.findViewById(R.id.categoryImage);
         fetchImage = dialog.findViewById(R.id.fetchImage);
 
-
         GridLayoutManager layoutManager = new GridLayoutManager(this,2);
         binding.recyCategory.setLayoutManager(layoutManager);
 
@@ -100,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
         database.getReference().child("categories").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Log.v(TAG, "DataChanged");
                 if(snapshot.exists()){
                     list.clear();
                     for(DataSnapshot dataSnapshot: snapshot.getChildren())
@@ -160,7 +162,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 
     private void uploadData() {

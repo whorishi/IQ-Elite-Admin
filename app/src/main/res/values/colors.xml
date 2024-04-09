@@ -10,7 +10,8 @@
 
     <color name="background">#e8e4fa</color>
 
-    <color name="toolbarBack">#197BCB</color>
+    <color name="toolbarBack">#2B2B2B</color>
     <color name="softgreen">#A4D5AB</color>
     <color name="softpeach">#FFD8B1</color>
+    <color name="yellow">#EEFF00</color>
 </resources>

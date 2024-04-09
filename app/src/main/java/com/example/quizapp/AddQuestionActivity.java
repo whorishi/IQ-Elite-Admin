@@ -27,6 +27,7 @@ public class AddQuestionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityAddQuestionBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        getSupportActionBar().hide();
 
         set = getIntent().getIntExtra("setNum",-1);
         categoryName = getIntent().getStringExtra("category");
